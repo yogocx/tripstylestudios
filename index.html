@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tripstylestudios — Custom Art &amp; Digital Engagement Strategy</title>
+<meta name="description" content="Tripstylestudios: East LA-born, Bay Area-based digital media and canvas artist creating custom portraits and enterprise digital engagement experiences — voiceover, onboarding, training video, and end-to-end customer engagement strategy.">
+<meta name="theme-color" content="#0e0b12">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tripstylestudios — Custom Art & Digital Engagement Strategy">
+<meta property="og:description" content="Custom portraits meet enterprise-grade digital engagement. From East LA canvas to Fortune 100 customer experience.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #0e0b12;
+    --bg-alt: #151019;
+    --panel: #1a1420;
+    --panel-border: rgba(255,255,255,0.08);
+    --ink: #f4f1f7;
+    --ink-dim: #b8b0c4;
+    --ink-faint: #837a92;
+    --accent: #ff5b3d;
+    --accent-2: #7c5cff;
+    --accent-3: #ffcf4a;
+    --gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    --radius: 18px;
+    --maxw: 1180px;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4{
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+
+  img{ max-width:100%; display:block; }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section{ position: relative; }
+
+  /* Background texture */
+  body::before{
+    content:'';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(124,92,255,0.16), transparent 40%),
+      radial-gradient(circle at 85% 0%, rgba(255,91,61,0.14), transparent 45%),
+      radial-gradient(circle at 50% 90%, rgba(255,207,74,0.08), transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    background: rgba(14,11,18,0.75);
+    border-bottom: 1px solid var(--panel-border);
+  }
+
+  nav.wrap{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height: 76px;
+  }
+
+  .logo{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    letter-spacing: -0.02em;
+  }
+
+  .logo .mark{
+    width: 34px; height: 34px;
+    border-radius: 9px;
+    background: #000;
+    object-fit: contain;
+    padding: 3px;
+    flex-shrink: 0;
+  }
+
+  .nav-links{
+    display:flex;
+    gap: 32px;
+    font-size: 0.92rem;
+    color: var(--ink-dim);
+  }
+  .nav-links a:hover{ color: var(--ink); }
+
+  .nav-cta{
+    display:flex;
+    align-items:center;
+    gap: 18px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
+    cursor:pointer;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+    white-space: nowrap;
+  }
+  .btn-primary{
+    background: var(--gradient);
+    color: #0e0b12;
+  }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 30px -8px rgba(255,91,61,0.5); }
+
+  .btn-ghost{
+    border-color: var(--panel-border);
+    color: var(--ink);
+    background: rgba(255,255,255,0.02);
+  }
+  .btn-ghost:hover{ border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.06); }
+
+  .nav-toggle{ display:none; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding: 96px 0 80px;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items:center;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-3);
+    background: rgba(255,207,74,0.08);
+    border: 1px solid rgba(255,207,74,0.25);
+    padding: 7px 14px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:6px; height:6px;
+    border-radius:50%;
+    background: var(--accent-3);
+  }
+
+  .hero h1{
+    font-size: clamp(2.4rem, 4.6vw, 3.6rem);
+    font-weight: 700;
+    margin-bottom: 22px;
+  }
+  .hero h1 .grad{
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero p.lead{
+    font-size: 1.08rem;
+    color: var(--ink-dim);
+    max-width: 46ch;
+    margin-bottom: 34px;
+  }
+
+  .hero-actions{
+    display:flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .hero-tags{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tag{
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    border: 1px solid var(--panel-border);
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .hero-visual{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid var(--panel-border);
+    background: #1a1420;
+  }
+  .hero-visual img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  .hero-visual::after{
+    content:'';
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(14,11,18,0) 40%, rgba(14,11,18,0.85) 100%);
+    z-index: 1;
+  }
+  .hero-visual .badge{
+    position: absolute;
+    bottom: 22px; left: 22px; right: 22px;
+    background: rgba(14,11,18,0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 16px 18px;
+    font-size: 0.85rem;
+    color: var(--ink-dim);
+    z-index: 2;
+  }
+  .hero-visual .badge{ z-index: 2; }
+  .hero-visual .badge strong{ color: var(--ink); display:block; font-family:'Space Grotesk'; font-size:0.95rem; margin-bottom:2px; }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-head{
+    max-width: 620px;
+    margin: 0 auto 52px;
+    text-align: center;
+  }
+  .section-head .eyebrow{ margin-bottom: 16px; }
+  .section-head h2{
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 14px;
+  }
+  .section-head p{
+    color: var(--ink-dim);
+    font-size: 1rem;
+  }
+
+  section.py{ padding: 100px 0; }
+  section.py-sm{ padding: 70px 0; }
+
+  .divider{
+    border: none;
+    height: 1px;
+    background: var(--panel-border);
+  }
+
+  /* ---------- TWO PILLARS ---------- */
+  .pillars{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .pillar{
+    border: 1px solid var(--panel-border);
+    background: var(--panel);
+    border-radius: var(--radius);
+    padding: 38px 34px;
+    position: relative;
+    overflow:hidden;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+  .pillar:hover{ transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
+  .pillar::before{
+    content:'';
+    position:absolute; top:-40%; right:-30%;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.35;
+    z-index:0;
+  }
+  .pillar.art::before{ background: var(--accent); }
+  .pillar.digital::before{ background: var(--accent-2); }
+
+  .pillar-icon{
+    width: 52px; height:52px;
+    border-radius: 14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size: 1.4rem;
+    margin-bottom: 22px;
+    position: relative; z-index:1;
+  }
+  .pillar.art .pillar-icon{ background: rgba(255,91,61,0.15); border:1px solid rgba(255,91,61,0.3); }
+  .pillar.digital .pillar-icon{ background: rgba(124,92,255,0.15); border:1px solid rgba(124,92,255,0.3); }
+
+  .pillar h3{ font-size: 1.4rem; margin-bottom: 12px; position:relative; z-index:1; }
+  .pillar p{ color: var(--ink-dim); margin-bottom: 20px; position:relative; z-index:1; }
+  .pillar ul{ list-style:none; position:relative; z-index:1; display:flex; flex-direction:column; gap:10px; }
+  .pillar li{ color: var(--ink-dim); font-size: 0.92rem; display:flex; gap:10px; align-items:flex-start; }
+  .pillar li::before{ content:'—'; color: var(--ink-faint); flex-shrink:0; }
+  .pillar-cta{ margin-top: 26px; position:relative; z-index:1; }
+
+  /* ---------- STATS STRIP ---------- */
+  .stats{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--panel-border);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .stat{
+    background: var(--bg-alt);
+    padding: 30px 22px;
+    text-align:center;
+  }
+  .stat .num{
+    font-family:'Space Grotesk';
+    font-size: 1.9rem;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
+    margin-bottom: 6px;
+  }
+  .stat .label{ font-size: 0.82rem; color: var(--ink-faint); }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 190px;
+    gap: 16px;
+  }
+  .gallery-grid figure{
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--panel-border);
+  }
+  .gallery-grid figure:nth-child(1){ grid-column: span 2; grid-row: span 2; }
+  .gallery-grid figure:nth-child(4){ grid-column: span 2; }
+  .gallery-grid figure:nth-child(6){ grid-row: span 2; }
+
+  .gallery-grid figure{ position: relative; }
+  .gallery-grid figure img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit: cover;
+  }
+  .art-tile{
+    position: relative;
+    z-index: 1;
+    width:100%; height:100%;
+    display:flex; align-items:flex-end;
+    padding: 16px;
+    font-family:'Space Grotesk';
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.9);
+    background: linear-gradient(180deg, rgba(14,11,18,0) 55%, rgba(14,11,18,0.75) 100%);
+  }
+  .art-tile span{
+    background: rgba(14,11,18,0.55);
+    backdrop-filter: blur(6px);
+    padding: 6px 10px;
+    border-radius: 8px;
+  }
+
+  .gallery-note{
+    text-align:center;
+    margin-top: 26px;
+    color: var(--ink-faint);
+    font-size: 0.85rem;
+  }
+
+  /* ---------- PROCESS ---------- */
+  .process{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .step{
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    background: var(--panel);
+  }
+  .step .step-num{
+    font-family:'Space Grotesk';
+    font-size: 0.85rem;
+    color: var(--accent-3);
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .step h4{ font-size: 1.05rem; margin-bottom: 10px; }
+  .step p{ color: var(--ink-dim); font-size: 0.9rem; }
+
+  /* ---------- SERVICES LIST ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .service-card{
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
+    padding: 26px 24px;
+    background: rgba(255,255,255,0.02);
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .service-card:hover{ border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.04); }
+  .service-card .ico{ font-size: 1.5rem; margin-bottom: 14px; display:block; }
+  .service-card h4{ font-size: 1.05rem; margin-bottom: 8px; }
+  .service-card p{ color: var(--ink-dim); font-size: 0.88rem; }
+
+  /* ---------- ABOUT ---------- */
+  .about{
+    display:grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+    align-items:center;
+  }
+  .about-visual{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 24px;
+    border: 1px solid var(--panel-border);
+    background: #14101a;
+    position: relative;
+    overflow:hidden;
+  }
+  .about-visual img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit: cover;
+  }
+  .about-visual::before{
+    content:'';
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(14,11,18,0) 55%, rgba(14,11,18,0.8) 100%);
+    z-index: 1;
+  }
+  .about-visual::after{
+    content:'In the studio — East LA → Bay Area';
+    position:absolute;
+    bottom: 20px; left: 20px;
+    font-family:'Space Grotesk';
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.9);
+    background: rgba(14,11,18,0.55);
+    padding: 8px 14px;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    z-index: 2;
+  }
+  .about h2{ font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 20px; }
+  .about p{ color: var(--ink-dim); margin-bottom: 16px; }
+  .about .pull{
+    border-left: 3px solid var(--accent);
+    padding-left: 18px;
+    margin: 26px 0;
+    font-family:'Space Grotesk';
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band{
+    border-radius: 28px;
+    padding: 64px 48px;
+    background: linear-gradient(135deg, rgba(255,91,61,0.16), rgba(124,92,255,0.16));
+    border: 1px solid var(--panel-border);
+    text-align:center;
+    position: relative;
+    overflow:hidden;
+  }
+  .cta-band h2{ font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin-bottom: 16px; }
+  .cta-band p{ color: var(--ink-dim); max-width: 52ch; margin: 0 auto 32px; }
+  .cta-actions{ display:flex; gap: 16px; justify-content:center; flex-wrap: wrap; }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  .contact-info h2{ font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 18px; }
+  .contact-info p{ color: var(--ink-dim); margin-bottom: 28px; max-width: 42ch; }
+  .contact-list{ display:flex; flex-direction:column; gap:18px; }
+  .contact-item{ display:flex; gap:14px; align-items:flex-start; }
+  .contact-item .ico{
+    width: 40px; height:40px;
+    border-radius: 10px;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .contact-item strong{ display:block; font-size: 0.92rem; margin-bottom:2px; }
+  .contact-item span{ color: var(--ink-faint); font-size: 0.86rem; }
+
+  form.contact-form{
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 32px;
+    display:flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label{ font-size: 0.82rem; color: var(--ink-dim); display:block; margin-bottom: 8px; }
+  input, select, textarea{
+    width:100%;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 0.92rem;
+  }
+  input:focus, select:focus, textarea:focus{
+    outline: none;
+    border-color: var(--accent-2);
+    background: rgba(255,255,255,0.05);
+  }
+  textarea{ resize: vertical; min-height: 110px; }
+  .field{ display:flex; flex-direction:column; }
+  form .btn-primary{ margin-top: 4px; width: 100%; padding: 13px; }
+  .form-note{ font-size: 0.78rem; color: var(--ink-faint); text-align:center; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    border-top: 1px solid var(--panel-border);
+    padding: 48px 0 32px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 36px;
+  }
+  .footer-brand p{ color: var(--ink-faint); font-size: 0.88rem; margin-top: 10px; max-width: 32ch; }
+  .footer-links{ display:flex; gap: 56px; flex-wrap: wrap; }
+  .footer-col h5{ font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-faint); margin-bottom: 14px; }
+  .footer-col a{ display:block; color: var(--ink-dim); font-size: 0.9rem; margin-bottom: 10px; }
+  .footer-col a:hover{ color: var(--ink); }
+  .footer-bottom{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--panel-border);
+    color: var(--ink-faint);
+    font-size: 0.82rem;
+  }
+  .socials{ display:flex; gap: 12px; }
+  .socials a{
+    width: 36px; height:36px;
+    border-radius: 999px;
+    border: 1px solid var(--panel-border);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .socials a:hover{ border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 980px){
+    .hero .wrap{ grid-template-columns: 1fr; }
+    .hero-visual{ order:-1; width: 100%; max-width: 420px; margin: 0 auto; }
+    .pillars{ grid-template-columns: 1fr; }
+    .stats{ grid-template-columns: repeat(2,1fr); }
+    .process{ grid-template-columns: repeat(2,1fr); }
+    .services-grid{ grid-template-columns: repeat(2,1fr); }
+    .about{ grid-template-columns: 1fr; }
+    .about-visual{ width: 100%; max-width: 420px; margin: 0 auto; }
+    .contact-grid{ grid-template-columns: 1fr; }
+    .gallery-grid{ grid-template-columns: repeat(3,1fr); grid-auto-rows: 150px; }
+  }
+
+  @media (max-width: 900px){
+    .nav-links{ display:none; }
+    .nav-toggle{ display:block; }
+  }
+
+  @media (max-width: 720px){
+    .hero{ padding: 64px 0 56px; }
+    section.py{ padding: 64px 0; }
+    .stats{ grid-template-columns: repeat(2,1fr); }
+    .process{ grid-template-columns: 1fr; }
+    .services-grid{ grid-template-columns: 1fr; }
+    .form-row{ grid-template-columns: 1fr; }
+    .gallery-grid{ grid-template-columns: repeat(2,1fr); grid-auto-rows: 140px; }
+    .gallery-grid figure:nth-child(1){ grid-column: span 2; grid-row: span 1; }
+    .gallery-grid figure:nth-child(6){ grid-row: span 1; }
+    .cta-band{ padding: 44px 24px; }
+    .footer-top{ flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">
+      <img src="img/logo-mark-512.png" alt="Tripstylestudios logo" class="mark">
+      Tripstylestudios
+    </a>
+    <div class="nav-links">
+      <a href="#art">Art</a>
+      <a href="#digital">Digital Engagement</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Start a project</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">East LA Roots · Bay Area Studio</div>
+        <h1>Custom art and <span class="grad">digital engagement strategy</span>, from the same hand.</h1>
+        <p class="lead">Tripstylestudios is the creative practice of a digital media and canvas artist who paints
+          custom portraits by commission — and architects the voiceover, video, and end-to-end digital
+          experiences that help companies, from startups to Fortune 100 enterprises, actually connect with
+          their customers.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Commission a portrait</a>
+          <a href="#digital" class="btn btn-ghost">Explore digital engagement</a>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">Custom Portraits</span>
+          <span class="tag">Voiceover</span>
+          <span class="tag">Onboarding Video</span>
+          <span class="tag">Training Video</span>
+          <span class="tag">Customer Engagement Strategy</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="img/hero-boyle-heights-bulldog.jpg" alt="Original TripStyle canvas piece blending East LA and Bay Area imagery, signed 'TripStyle'">
+        <div class="badge">
+          <strong>Industry-recognized Digital Engagement Architect</strong>
+          Fortune 100 experience, now building for businesses of every size.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="divider"></div>
+
+  <!-- TWO PILLARS -->
+  <section class="py" id="practice">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" style="margin-left:auto;margin-right:auto;">Two Practices, One Vision</div>
+        <h2>Where fine art meets customer experience</h2>
+        <p>The same eye for composition, emotion, and story shows up whether the canvas is stretched linen
+          or a customer's first ninety seconds inside your product.</p>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar art" id="art">
+          <div class="pillar-icon">🎨</div>
+          <h3>Custom Portraits &amp; Canvas Art</h3>
+          <p>Hand-crafted, commission-based portraits and canvas pieces rooted in an East LA visual
+            tradition — bold color, honest emotion, personal storytelling.</p>
+          <ul>
+            <li>Custom portrait commissions, individuals &amp; families</li>
+            <li>Original canvas and mixed-media pieces</li>
+            <li>Digital illustration and concept art</li>
+            <li>Limited-run prints</li>
+          </ul>
+          <div class="pillar-cta"><a href="#contact" class="btn btn-ghost">Commission your piece</a></div>
+        </div>
+
+        <div class="pillar digital" id="digital">
+          <div class="pillar-icon">🚀</div>
+          <h3>Digital Engagement Strategy</h3>
+          <p>End-to-end digital customer engagement for businesses of all sizes — built on experience
+            earned inside a Fortune 100 company and recognized across the industry.</p>
+          <ul>
+            <li>Professional voiceover for product &amp; brand</li>
+            <li>Onboarding video design and production</li>
+            <li>Training and enablement video</li>
+            <li>End-to-end customer engagement strategy</li>
+          </ul>
+          <div class="pillar-cta"><a href="#contact" class="btn btn-ghost">Book a strategy call</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="py-sm">
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat">
+          <div class="num">Fortune 100</div>
+          <div class="label">Enterprise experience</div>
+        </div>
+        <div class="stat">
+          <div class="num">All Sizes</div>
+          <div class="label">Startups to enterprise clients</div>
+        </div>
+        <div class="stat">
+          <div class="num">Full Cycle</div>
+          <div class="label">Strategy through delivery</div>
+        </div>
+        <div class="stat">
+          <div class="num">Dual Craft</div>
+          <div class="label">Art direction meets digital strategy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="py" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" style="margin-left:auto;margin-right:auto;">Services</div>
+        <h2>Digital engagement, built end to end</h2>
+        <p>From the first voiceover script to a full customer engagement roadmap, every deliverable is
+          designed to move people — the same instinct behind every portrait.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="ico">🎙️</span>
+          <h4>Voiceover</h4>
+          <p>Brand, product, and narrative voiceover that gives your customer experience a human voice.</p>
+        </div>
+        <div class="service-card">
+          <span class="ico">🧭</span>
+          <h4>Onboarding Video</h4>
+          <p>First-run and onboarding experiences that reduce drop-off and get customers to value faster.</p>
+        </div>
+        <div class="service-card">
+          <span class="ico">🎓</span>
+          <h4>Training Video</h4>
+          <p>Internal enablement and customer-facing training content that's clear, on-brand, and built to scale.</p>
+        </div>
+        <div class="service-card">
+          <span class="ico">🗺️</span>
+          <h4>Engagement Strategy</h4>
+          <p>End-to-end digital customer engagement planning — mapping the full journey, not just a single asset.</p>
+        </div>
+        <div class="service-card">
+          <span class="ico">🏢</span>
+          <h4>Enterprise Consulting</h4>
+          <p>Advisory informed by hands-on Fortune 100 experience, scaled to fit teams of any size.</p>
+        </div>
+        <div class="service-card">
+          <span class="ico">🎬</span>
+          <h4>Creative Direction</h4>
+          <p>Visual and narrative direction that unifies design, video, and voice into one consistent story.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="divider"></div>
+
+  <!-- PROCESS -->
+  <section class="py" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" style="margin-left:auto;margin-right:auto;">Approach</div>
+        <h2>How an engagement comes together</h2>
+        <p>Whether the deliverable is a canvas or a customer journey, the process starts the same way: listen first.</p>
+      </div>
+
+      <div class="process">
+        <div class="step">
+          <div class="step-num">01 · Discover</div>
+          <h4>Listen &amp; scope</h4>
+          <p>Understand the story, the audience, and the outcome — whether that's a portrait subject or a customer segment.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02 · Design</div>
+          <h4>Concept &amp; direction</h4>
+          <p>Sketch the composition or the engagement journey, and align on tone, voice, and visual language.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03 · Create</div>
+          <h4>Production</h4>
+          <p>Paint, record, film, and build — bringing the concept to life with craft and attention to detail.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04 · Deliver</div>
+          <h4>Refine &amp; launch</h4>
+          <p>Review, revise, and deliver a finished piece — or a live customer experience — ready to make an impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow" style="margin-left:auto;margin-right:auto;">Selected Work</div>
+        <h2>A glimpse of the studio</h2>
+        <p>Portrait commissions and digital engagement work, side by side.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure><img src="img/hero-boyle-heights-bulldog.jpg" alt="Boyle Heights-inspired custom canvas, mixed media"><div class="art-tile"><span>Boyle Heights Custom Canvas</span></div></figure>
+        <figure><img src="img/portrait-hilton.jpg" alt="Custom acrylic portrait commission"><div class="art-tile"><span>Custom Portrait Commission</span></div></figure>
+        <figure><img src="img/aztec-calendar-canvas.jpg" alt="Aztec calendar canvas painting"><div class="art-tile"><span>Aztec Calendar Canvas</span></div></figure>
+        <figure><img src="img/pet-portrait-loft.jpg" alt="Custom pet portrait canvas, framed"><div class="art-tile"><span>Custom Pet Portrait</span></div></figure>
+        <figure><img src="img/desert-figure-canvas.jpg" alt="Large-scale black and white figure canvas"><div class="art-tile"><span>Large-Scale Canvas</span></div></figure>
+        <figure><img src="img/rolex-gmt-canvas.jpg" alt="Rolex-inspired canvas painting"><div class="art-tile"><span>Studio Canvas Series</span></div></figure>
+        <figure><img src="img/frenchie-illustration.jpg" alt="Detailed pen illustration commission"><div class="art-tile"><span>Pet Illustration Commission</span></div></figure>
+      </div>
+      <p class="gallery-note">A glimpse of recent commissions — follow <a href="https://www.instagram.com/tripstylestudios/" target="_blank" rel="noopener" style="color:var(--ink-dim);text-decoration:underline;">@tripstylestudios</a> on Instagram for the full portfolio.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="py" id="about">
+    <div class="wrap about">
+      <div class="about-visual"><img src="img/studio-portrait-wip.jpg" alt="A portrait in progress on an easel in the TripStyle studio"></div>
+      <div>
+        <div class="eyebrow">The Studio</div>
+        <h2>Born in East LA. Building in the Bay Area.</h2>
+        <p>Tripstylestudios began with a paintbrush and a canvas in East Los Angeles, where a distinct
+          visual style — bold, personal, and rooted in community — first took shape through custom
+          portraiture.</p>
+        <p>That same instinct for storytelling and connection carried into the digital world. Now based in
+          the Bay Area, the studio's founder has become an industry-recognized digital engagement architect,
+          with hands-on experience building voiceover, onboarding, and training content — and full customer
+          engagement strategies — inside a Fortune 100 company.</p>
+        <div class="pull">Two crafts, one goal: create something people feel — whether it hangs on a wall or lives inside a product.</div>
+        <p>Today, that expertise is available to businesses of every size — from founders who need a single
+          portrait or launch video, to enterprises building a company-wide digital engagement strategy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="py-sm">
+    <div class="wrap">
+      <div class="cta-band">
+        <div class="eyebrow" style="margin-left:auto;margin-right:auto;">Let's build something</div>
+        <h2>Art for your walls. Strategy for your customers.</h2>
+        <p>Whether you're commissioning a custom portrait or planning a full digital engagement strategy,
+          Tripstylestudios brings the same craft to both.</p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary">Commission a portrait</a>
+          <a href="#contact" class="btn btn-ghost">Talk digital strategy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="py" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Tell us about the project</h2>
+        <p>Art commission, onboarding video, or an enterprise-wide engagement strategy — share a few
+          details and we'll follow up to talk it through.</p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="ico">✉️</div>
+            <div><strong>Email</strong><span>hello@tripstylestudios.com</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ico">📍</div>
+            <div><strong>Studio</strong><span>San Francisco Bay Area, CA</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ico">💬</div>
+            <div><strong>Response time</strong><span>Within 1–2 business days</span></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option>Custom portrait / canvas commission</option>
+            <option>Voiceover</option>
+            <option>Onboarding video</option>
+            <option>Training video</option>
+            <option>End-to-end engagement strategy</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Project details</label>
+          <textarea id="message" name="message" placeholder="Tell us a bit about what you're looking to create..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="form-note">This form is a front-end placeholder — connect it to your email or form backend of choice.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><img src="img/logo-mark-512.png" alt="Tripstylestudios logo" class="mark">Tripstylestudios</a>
+        <p>Digital media and canvas artist. Custom portraits and enterprise digital engagement strategy —
+          East LA roots, Bay Area studio.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Studio</h5>
+          <a href="#art">Custom Art</a>
+          <a href="#digital">Digital Engagement</a>
+          <a href="#work">Selected Work</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="#services">Voiceover</a>
+          <a href="#services">Onboarding Video</a>
+          <a href="#services">Training Video</a>
+          <a href="#services">Engagement Strategy</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="#contact">Contact</a>
+          <a href="mailto:hello@tripstylestudios.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Tripstylestudios. All rights reserved.</span>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thanks! This is a placeholder — wire this form up to your email service or backend to receive submissions.');
+    this.reset();
+  });
+
+  // Mobile nav toggle fallback: scroll to section still works via anchor links.
+</script>
+
+</body>
+</html>
