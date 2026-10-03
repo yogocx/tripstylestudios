@@ -233,6 +233,10 @@
   .foot-col a{ display:block; font-size: 0.9rem; color: var(--ink-2); margin-bottom: 9px; }
   .foot-col a:hover{ color: var(--ink); }
   .foot-bottom{ border-top: 1px solid var(--line); padding-top: 22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap: 12px; font-size: 0.82rem; color: var(--ink-3); }
+  .foot-credit{ padding-top: 14px; }
+  .powered-by{ display:inline-flex; align-items:center; gap: .6rem; font-size: 0.8rem; color: var(--ink-3); text-decoration:none; }
+  .powered-by img{ height: 13px; width:auto; display:block; filter: brightness(0) saturate(100%); opacity: .75; }
+  .powered-by:hover img{ opacity: 1; }
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 1000px){
@@ -552,6 +556,9 @@
     <div class="foot-bottom">
       <span>&copy; <span id="year"></span> Tripstylestudios. All rights reserved.</span>
       <span>San Francisco Bay Area</span>
+    </div>
+    <div class="foot-credit">
+      <a class="powered-by" href="https://www.yogocx.com" rel="noopener" aria-label="Website powered by YOGO CX"><span>Website powered by</span><img src="img/yogocx-logo.png" width="845" height="160" alt="YOGO CX" loading="lazy"></a>
     </div>
   </div>
 </footer>
